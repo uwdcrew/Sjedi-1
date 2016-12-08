@@ -1,0 +1,23 @@
+
+body {
+  background-image: url('pozadina.jpg');
+  margin:0;
+	
+}
+
+@font-face {
+    font-family: "1001fonts";
+    src: url(Andromeda.ttf) format("truetype");
+}
+
+.dugmeuvod{
+	
+	border-style: groove;
+	border-radius:5px;
+	font-size: 20px;
+	text-decoration: none;
+	background-color: black;
+	color: #C2F0FF;
+	font-family:"1001fonts", Courier, monospace;
+	
+}

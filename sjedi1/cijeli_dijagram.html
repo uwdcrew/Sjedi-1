@@ -1,0 +1,42 @@
+<html>
+  <head>
+
+  <link rel="shortcut icon" type="image/x-icon" href="Logo.ico" />
+ <p><a href="index.html"><img src="logo2.png" alt="logo_UWD_CREW" height="100" width="180" style="float: left; padding-right: lem;"/></a>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+     google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Igrice', 'Prodaja (u milionima)'],
+          ['Minecraft', 24], ['World of Warcraft', 14], ['Diablo III',12],
+          ['Counter-Strike', 12.5], ['The Sims', 11.24], ['StarCraft', 11],
+          ['Garrys Mod', 10], ['Half-Life 2', 9.4], ['Half-Life', 9.3],
+          ['The Sims 3', 7.72], ['Terraria', 7.5], ['Guild Wars', 6.5],
+          ['The Sims 2', 6], ['StarCraft II: Wings of Liberty', 6], ['Civilization V', 5.8],
+          ['Guild Wars 2', 5], ['Riven', 4.5], ['Diablo II', 4],
+          ['Warhammer 40,000: Dawn of War ', 4], ['Doom 3', 3.5], ['Age of Empires', 3], ['Crysis', 3],  ['DayZ', 3],  ['Counter-Strike: Condition Zero', 2.9],  ['Magicka', 2.8],['Grand Theft Auto V', 2]
+        ]);
+
+        var options = {
+          title: 'Najprodavanije PC igrice ',
+         legend:'yes',
+          pieSliceText: 'label',
+          slices: {  0: {offset: 0.1},
+                    1: {offset: 0.1},
+                   2: {offset: 0.1},
+                    3: {offset: 0.1},
+          },
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+  
+    <div id="piechart" style="width: 100%; height:90%;" ></div>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Sjedi 1! - Recenzije PC igara </title>
+<link rel="shortcut icon" type="image/x-icon" href="Logo.ico" />
+<link rel="stylesheet" type="text/css" href="izgled.css"/>
+<script language="javascript" type="text/javascript">
+
+    var images = new Array(9);  
+    images[0] = "tr1.jpg";
+    images[1] = "tr2.jpg";
+    images[2] = "trr3.jpg";
+    images[3] = "tr4.jpg";
+    images[4] = "tr5.jpg";
+    images[5] = "tr6.jpg";
+    images[6] = "tr7.jpg";
+ images[7] = "tr8.jpg";
+  images[8] = "tr9.jpg";
+    var numimg = 8;
+    var curimg = 1;
+
+  function  goback() {
+    var im=document.getElementById("tr");
+    if(curimg>0)
+   {
+    im.src = images[curimg-1];
+    curimg = curimg - 1;
+   }else{
+    alert("Prva slika");
+   }
+
+
+}
+
+function gofwd(){
+var im=document.getElementById("tr");
+    if(curimg < numimg){
+    im.src = images[curimg+1];
+    curimg = curimg + 1;
+   }else{
+      alert("Posljednja slika");
+      }
+
+
+}
+
+
+
+
+</script>
+</head>
+
+<body>
+
+
+
+	<div id="okvir">
+    	<div id="naslov">
+       <p><a href="index.html"><img src="logo2.png" alt="logo_UWD_CREW" height="100" width="180" style="float: left; padding-right: lem;"/></a>
+          <h1>Sjedi 1! - Recenzije PC igara</h1> 
+        <hr class="linija">
+        <h3> Nemamo vremena za igranje igara i nismo kompetentne za ocjenjivanje... ali ćemo svejedno to uraditi!</h3></p> 
+		<br/><br/><br/>
+              </div>
+		
+		
+		<div id="kategorija1">
+		 
+		
+		<center> <input type="image" src="back.png" name="back" class="dugmekursor" id="back" onClick="window.history.back()"  height="5%" width="5%" /> Zanimljivosti </center>  </div>
+		   <br/><br/>
+			
+
+<div id="tekst1"> 
+		   
+<center><b>Koliko se zapravo grafika PC igrica promijenila u proteklih 10ak godina</b></center>
+<br/> <br/>
+Pogledajte sljedeću galeriju:
+ <br/> <br/>
+<div id="galery">
+
+ <center> <img src="tr1.jpg"  id="tr"  height="120%" width="120%" /></center>
+  
+<br/><br/>
+</div>
+<center><input type="image" src="back.png" name="back" class="dugmekursor" id="back" onClick="goback();"  height="15%" width="15%" />
+ &nbsp; &nbsp;
+ <input type="image" src="next.png" name="next" class="dugmekursor" id="next" onClick="gofwd();" height="15%" width="15%" /></center>
+
+</div>
+ <div class="tabela2">
+  <div id="legenda">     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Igrice', 'Prodaja (u milionima)'],
+          ['Minecraft', 24], ['World of Warcraft', 14], ['Diablo III',12],
+          ['Counter-Strike', 12.5], ['The Sims', 11.24], ['StarCraft', 11],
+          ['Garrys Mod', 10], ['Half-Life 2', 9.4], ['Half-Life', 9.3],
+          ['The Sims 3', 7.72], ['Terraria', 7.5], ['Guild Wars', 6.5],
+          ['The Sims 2', 6], ['StarCraft II: Wings of Liberty', 6], ['Civilization V', 5.8],
+          ['Guild Wars 2', 5], ['Riven', 4.5], ['Diablo II', 4],
+          ['Warhammer 40,000: Dawn of War ', 4], ['Doom 3', 3.5], ['Age of Empires', 3], ['Crysis', 3],  ['DayZ', 3],  ['Counter-Strike: Condition Zero', 2.9],  ['Magicka', 2.8],['Grand Theft Auto V', 2]
+        ]);
+
+        var options = {
+          title: 'Najprodavanije PC igrice ',
+         legend:'yes',
+          pieSliceText: 'label',
+          slices: {  0: {offset: 0.1},
+                    1: {offset: 0.1},
+                   2: {offset: 0.1},
+                    3: {offset: 0.1},
+          },
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>
+	<a target="_blank" href="pokusajj.html" style="text-decoration:none; color:white;">Pogledaj cijeli dijagram</a>
+	  </head>
+  <br/><br/><br/>
+    <div id="piechart" style="width: 100%; height: 60%;"></div>  </div><br/><br/>
+
+   <div id="ocjena"> <form > <p><center>Kako biste ocijenili web stranicu?</center> <P>  
+   <p><input type="radio" class="dugmekursor" name="ocjena" value="Odlično" > Odlično<br>
+  <input type="radio" class="dugmekursor" name="ocjena" value="Skoro pa odlično"> Skoro pa odlično <br>
+  <input type="radio" class="dugmekursor" name="ocjena" value="Poprilično dobro"> Poprilično dobro  <br> 
+   <input type="radio" class="dugmekursor" name="ocjena" value="Jako slabo" >Jako slabo<br>
+  <input type="radio" class="dugmekursor" name="ocjena" value="Katastrofa"> Katastrofa<br>
+<p> 
+<div class="dugmici">  
+<input type=submit class="dugmekursor" value="Klikni" button type="button" onclick="alert('Hvala vam na vašem glasu ')"></button></submit></div>
+
+   </form> </div><p>
+  <p><p><p><p> <div id="igrica"><form name="igrice"><center>Najbolje igrice svih vremena* </center><p>
+   <p><input name="tetris" class="dugmekursor" type="checkbox"onClick="return KeepCount()" > Tetris<br>
+   <input name="gta" class="dugmekursor" type="checkbox"onClick="return KeepCount()" >  Grand Theft Auto IV<br>
+   <input name="fallout" class="dugmekursor" type="checkbox"onClick="return KeepCount()" > Fallout 3<br>
+   <input name="crysis" class="dugmekursor" type="checkbox" onClick="return KeepCount()" >  Crysis Warhead<br>
+   <input name="farcry" class="dugmekursor" type="checkbox" onClick="return KeepCount()">  Far Cry 2<br>
+   <input name="bptub" class="dugmekursor" type="checkbox" onClick="return KeepCount()">  Burnout Paradise The Ultimate Box<br>
+   <input name="wow" class="dugmekursor" type="checkbox"onClick="return KeepCount()" > World of Warcraft<br>
+   <input name="cod" class="dugmekursor" type="checkbox"onClick="return KeepCount()" > Call of Duty 2<br>
+   <input name="maks" class="dugmekursor" type="checkbox"onClick="return KeepCount()" > Max Payne<br>
+   <input name="nfs" class="dugmekursor" type="checkbox"onClick="return KeepCount()" > Need For Speed : UndercoverTetris<br>
+   <input name="sm" class="dugmekursor" type="checkbox"onClick="return KeepCount()" > Super Mario<br>
+   <input name="pm" class="dugmekursor" type="checkbox"onClick="return KeepCount()" > Pac-Man<br>
+   <input name="aoe"class="dugmekursor" type="checkbox"onClick="return KeepCount()" > Age of Empires III<br>
+   <input name="bf" class="dugmekursor" type="checkbox"onClick="return KeepCount()" > Battlefield<br>
+   <input name="diablo" class="dugmekursor" type="checkbox"onClick="return KeepCount()" >  Diablo II<br>
+  <p>
+  
+
+  <div class="dugmici">  
+  <input type="submit" class="dugmekursor" value="Potvrdi" > 
+  </submit> 
+  <input type="reset" class="dugmekursor" value="Obrisi"></reset></div>
+ 
+  
+  <SCRIPT language="javascript" type="text/javascript"> 
+   
+ function KeepCount() {
+
+var NewCount = 0
+
+if (document.igrice.tetris.checked)
+{NewCount = NewCount + 1}
+
+if (document.igrice.gta.checked)
+{NewCount = NewCount + 1}
+
+if (document.igrice.fallout.checked)
+{NewCount = NewCount + 1}
+
+if (document.igrice.crysis.checked)
+{NewCount = NewCount + 1}
+
+if (document.igrice.farcry.checked)
+{NewCount = NewCount + 1}
+if (document.igrice.bptub.checked)
+{NewCount = NewCount + 1}
+if (document.igrice.wow.checked)
+{NewCount = NewCount + 1}
+if (document.igrice.cod.checked)
+{NewCount = NewCount + 1}
+if (document.igrice.maks.checked)
+{NewCount = NewCount + 1}
+if (document.igrice.nfs.checked)
+{NewCount = NewCount + 1}
+if (document.igrice.sm.checked)
+{NewCount = NewCount + 1}
+if (document.igrice.pm.checked)
+{NewCount = NewCount + 1}
+if (document.igrice.aoe.checked)
+{NewCount = NewCount + 1}
+if (document.igrice.bf.checked)
+{NewCount = NewCount + 1}
+if (document.igrice.diablo.checked)
+{NewCount = NewCount + 1}
+if (NewCount == 4)
+{
+alert('Molimo vas odaberite samo 3')
+document.igrice; return false;
+
+
+
+
+
+}
+} 
+</SCRIPT>
+
+<p>* Možete odabrati 3 od ponuđenih 15 igrica<br>
+
+   </form></div>
+ </div>
+
+      
+ <div id="copyright">
+        <div id="copyright_linija">
+       	<h3>Copyright &copy; <img src="logo.jpg" width="50px"/> 2016.</h3>
+      	</div>
+        </div>
+	</div>
+	</div>
+</body>
+</html>

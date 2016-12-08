@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Sjedi 1! - Recenzije PC igara </title>
+<link rel="shortcut icon" type="image/x-icon" href="Sjedi1/Logo.ico" />
+<link rel="stylesheet" type="text/css" href="sjedi1/izgled.css"/>
+<script type="text/javascript">
+
+function efekt(){
+var c = document.getElementById("c");
+var ctx = c.getContext("2d");
+
+c.height =window.innerHeight;
+c.width = window.innerWidth;
+
+var brojevi = "01";
+brojevi = brojevi.split("");
+
+var velicina_elemenata = 12;
+var kolone = c.width/velicina_elemenata; //broj kolona
+//niz koji pada
+var pada = [];
+//x je x koordinata
+//1 = y za svaki niz y koordinata početna
+for(var x = 0; x < kolone; x++)
+	pada[x] = 1; 
+
+//crtaj 
+function crtaj()
+{
+	//crna pozadina
+	//translucent - da  0 i 1 ostave trag
+	ctx.fillStyle ="rgba(0, 0, 0, 0.05)";
+	ctx.fillRect(0, 0, c.width, c.height);
+	
+	ctx.fillStyle = "#C5EFFC";
+	ctx.font = velicina_elemenata + "px arial";
+	//looping over pada
+	for(var i = 0; i < pada.length; i++)
+	{
+		// random brojevi 
+		var znakovi = brojevi[Math.floor(Math.random()*brojevi.length)];
+		//x = i*velicina_elemenata, y = velicina[i]*velicina_elemenata
+		ctx.fillText(znakovi, i*velicina_elemenata, pada[i]*velicina_elemenata);
+		
+		//kad dodje do dna opet s vrha pocinje
+		//nasumicno se pojavljuju po y osi
+		if(pada[i]*velicina_elemenata > c.height && Math.random() > 0.975)
+			pada[i] = 0;
+		
+		//povećavamo koord koja odg y
+		pada[i]++;
+	}
+}
+
+setInterval(crtaj, 50);
+}
+
+</script>
+</head>
+
+<body onload="efekt();">
+
+<div id="containeruvod">
+<canvas id="c" style="position: absolute; width:100%; height:100%; width: 100%"></canvas>
+<div id="izbornikuvod" style="position: absolute; left: 40%; top: 45%; text-align:center;">
+
+<form action="sjedi1/index.html" target="_blank" method="get">
+<input type="submit" class="dugmeuvod" value="Početna" style="cursor: url(bang1.png), progress !important;" /> 
+</form>
+<br/> <br/>
+<form action="sjedi1/registracija.html" target="_blank" method="get">
+<input type="submit"class="dugmeuvod" value="Registracija" style="cursor: url(bang1.png), progress !important;"  />
+</form>
+</div>
+</div>
+</body>
+
+</html>
